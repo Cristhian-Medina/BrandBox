@@ -1,0 +1,42 @@
+.grid-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.grid-title{
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.col-2,
+.col-4{
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+.col-2{
+    width: 33.333333332%; 
+}
+.col-4{
+    width: 66.666666668%;
+}
+.product-title{
+    margin-bottom: 10px;
+    font-size: var(--subtitle);
+    text-align: left;
+}
+.product-description{
+    font-size: var(--text);
+    text-align: left;
+}
+.product-img{
+    height: 130px;
+}
+
+@media (max-width: 900px){
+    .row{
+        display: inherit;
+    }
+}
