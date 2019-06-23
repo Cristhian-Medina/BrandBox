@@ -3,7 +3,7 @@
     --green: #56ff22;
     --alt-green: #09a809;
     --dark-grey: #313337;
-    --grey: #eee;
+    --grey: #ddd;
     --white: #fff;
 
     /* font-size */
@@ -38,6 +38,7 @@ body{
 }
 hr{
     color: var(--grey);
+    margin: 50px 0;
 }
 label{
     font-size: var(--subtitle);
@@ -227,13 +228,6 @@ input{
 
 /* ___________________________________ Productos */
 
-.grid-container{
-    max-width: 800px;
-    margin: var(--space-l) auto;
-}
-.grid-title{
-    margin-bottom: var(--space-l);
-}
 .row{
     display: flex;
     width: 100%;
@@ -258,15 +252,21 @@ input{
 
 
 .form-container{
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
+    display: flex;
+    justify-content: space-between;
 }
-.form-container .col-2,
-.form-container .col-4{
+.product-col,
+.form-col{
     box-shadow: var(--shadow);
-    height: 295px;
-    margin: 0 var(--space-m);
+    height: 300px;
+    padding: 20px 10px;
+}
+.product-col{
+    text-align: center;
+    width: 30%;
+}
+.form-col{
+    width: 65%;
 }
 .form-container .form-img{
     height: 150px;
@@ -283,6 +283,32 @@ input{
     margin-top: var(--space-l);
     width: 100%;
 }
+
+/* ___________________________________ Faqs y Legal */
+
+.form-container,
+.grid-container,
+.faqs,
+.legal{
+    margin: 80px auto 40px;
+    max-width: 800px;
+    min-height: 70vh;
+    padding: 0 10px;
+}
+.grid-title,
+.faq-title,
+.legal-title{
+    margin-bottom: 50px;
+}
+.question,
+.answer{
+    margin-bottom: var(--space-l);
+}
+.answer{
+    border-bottom: 3px solid var(--grey);
+    padding-bottom: var(--space-m);
+}
+
 
 /* ___________________________________ responsive design index */
 
@@ -352,11 +378,14 @@ input{
 
 @media (max-width: 900px){
     .form-container{
-        height: 650px;
+        flex-direction: column;
+        align-items: center;
     }
-    .form-container .col-2,
-    .form-container .col-4{
-        margin: var(--space-l) 0;
-        width: 350px;
+    .product-col,
+    .form-col{
+        width: 100%;
+    }
+    .product-col{
+        box-shadow: none;
     }
 }
